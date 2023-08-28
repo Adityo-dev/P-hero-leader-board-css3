@@ -1,0 +1,509 @@
+/* common styles or utilities */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Lobster Two', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    background-color: #fff3ff;
+}
+
+/* header style start*/
+nav {
+    background-color: #562eff;
+    display: flex;
+    justify-content: space-evenly;
+    height: 10vh;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+nav>div img {
+    width: 10%;
+}
+
+nav ul {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav .menu-btn {
+    color: #ffffff;
+    font-size: 2em;
+    display: none;
+    cursor: pointer;
+}
+
+#click {
+    display: none;
+}
+
+/* header style end */
+
+/* main style */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 870px;
+    padding: 30px;
+    margin-top: 25px;
+}
+
+/* top players style */
+.top-players {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    color: #562eff;
+    font-size: 24px;
+    margin-top: 3px;
+}
+
+.players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+
+}
+
+.player img {
+    width: 56px;
+    height: 56px;
+}
+
+.player-mane {
+    font-size: 18px;
+    margin-left: 16px;
+}
+
+hr {
+    border: 1px solid #d1d1d1;
+    margin-bottom: 27px;
+}
+
+/* ............top blogs style start ............*/
+.bloges {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 26px;
+}
+
+.bloge {
+    display: flex;
+}
+
+.bloge .thumnaill img {
+    width: 177px;
+    height: 117px;
+}
+
+.bloge-info {
+    margin-left: 13px;
+}
+
+.bloge-title {
+    font-size: 20px;
+}
+
+.bloge-author {
+    font-size: 16px;
+    color: #9f9f9f;
+}
+
+.bloge-author a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #562eff;
+}
+
+/* letest courses style start */
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
+}
+
+.courses .courses-banner img {
+    width: 275px;
+    height: 177px;
+}
+
+.courses-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.courses-title {
+    font-size: 21px;
+}
+
+.courses-author {
+    font-size: 22px;
+}
+
+.fa-star {
+    font-size: 12px;
+}
+
+.fa-star.filled {
+    color: #ffc014;
+}
+
+.fa-star.empty {
+    color: #aeaeae;
+}
+
+.courses-duration {
+    background-color: #FFE4E8;
+    padding: 0 25px;
+    border-radius: 25px;
+    color: #FF4A60;
+}
+
+.none {
+    display: none;
+}
+
+/* Media Queries style start  */
+
+@media screen and (max-width:576px) {
+
+    /*.............. nav st .............. */
+    nav>div img{
+        margin-left: 15px;
+    }
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul {
+        position: fixed;
+        top: 9vh;
+        left: -100%;
+        background-color: #000000;
+        width: 50%;
+        height: 100vh;
+        display: block;
+        
+    }
+
+    nav ul li {
+        margin: 25px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    nav .menu-btn {
+        display: block;
+        margin-right: 20px;
+    }
+
+    #click:checked~ul {
+        left:0;
+        transition: all 1s;
+    }
+    #click:checked~.menu-btn :before{
+        content: "\f00d";
+    }
+   /*................ main section st ................*/
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+
+
+    .section-title,
+    .bloges,
+    .courses,
+    .courses-info {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .player,
+    .bloge,
+    .courses-info {
+        flex-direction: column;
+    }
+
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bloges,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .bloges,
+    .courses {
+        row-gap: 70px;
+    }
+
+
+}
+
+@media screen and (min-width:577px) and (max-width:768px) {
+     /*.............. nav st .............. */
+     nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    nav ul {
+        position: fixed;
+        top: 48px;
+        left: -100%;
+        background-color: #000000;
+        width: 50%;
+        height: 100vh;
+        display: block;
+        
+    }
+
+    nav ul li {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 25px;
+    }
+
+    nav .menu-btn {
+        display: block;
+    }
+
+    #click:checked~ul {
+        left:0;
+        transition: all 1s;
+    }
+    #click:checked~.menu-btn :before{
+        content: "\f00d";
+    }
+   /*................ main section st ................*/
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .player img {
+        width: 28%;
+        height: 15vh;
+    }
+
+    .bloge .thumnaill img {
+        width: 45%;
+        height: 48vh;
+    }
+
+    .courses .courses-banner img {
+        width: 50%;
+    }
+
+    .section-title,
+    .bloges,
+    .courses,
+    .courses-info {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .player,
+    .bloge,
+    .courses-info {
+        flex-direction: column;
+    }
+
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bloges,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .bloges,
+    .courses {
+        row-gap: 70px;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:992px) {
+     /*.............. nav st .............. */
+    nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    nav ul {
+        position: fixed;
+        top: 48px;
+        left: -100%;
+        background-color: #000000;
+        width: 50%;
+        height: 100vh;
+        display: block;
+        
+    }
+
+    nav ul li {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 25px;
+    }
+
+    nav .menu-btn {
+        display: block;
+    }
+
+    #click:checked~ul {
+        left:0;
+        transition: all 1s;
+    }
+    #click:checked~.menu-btn :before{
+        content: "\f00d";
+    }
+   /*................ main section st ................*/
+    nav {
+        padding: 0 60px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .player img {
+        width: 25%;
+        height: 12vh;
+    }
+
+    .bloge .thumnaill img {
+        width: 45%;
+        height: 48vh;
+    }
+
+    .courses .courses-banner img {
+        width: 40%;
+        height: 35vh;
+    }
+
+    .section-title,
+    .bloges,
+    .courses,
+    .courses-info {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .player,
+    .bloge,
+    .courses-info {
+        flex-direction: column;
+    }
+
+    .bloges,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .bloges,
+    .courses {
+        row-gap: 70px;
+    }
+}
+
+@media screen and (min-width:993px) and (max-width:1200px) {
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .player img {
+        width: 20%;
+        height: 13vh;
+    }
+
+    .bloge .thumnaill img {
+        width: 45%;
+        height: 48vh;
+    }
+
+    .courses .courses-banner img {
+        width: 40%;
+        height: 35vh;
+    }
+
+    .section-title,
+    .bloges,
+    .courses,
+    .courses-info {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .player,
+    .bloge,
+    .courses-info {
+        flex-direction: column;
+    }
+
+    .bloges,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .bloges,
+    .courses {
+        row-gap: 70px;
+    }
+}
